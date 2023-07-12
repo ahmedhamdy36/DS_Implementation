@@ -50,6 +50,8 @@ public:
 	void append(T val);
 	void deletAt(int pos);
 	void insert(T val, int pos);
+	void clear();
+	bool empty();
 };
 
 template <class T>
@@ -142,7 +144,7 @@ void linkedList<T>::deletAt(int pos)
 
 		Node<T>* deletedNode = temp->next;
 		if (deletedNode->next == NULL)
-			tail = tmp;
+			tail = temp;
 		else
 			temp->next = deletedNode->next;
 		delete deletedNode;
@@ -188,6 +190,19 @@ void linkedList<T>::insert(T val, int pos)
 	size++;
 }
 
+template<class T>
+void linkedList<T>::clear()
+{
+	while (size > 0)
+		deletAt(0);
+}
+
+template<class T>
+bool linkedList<T>::empty()
+{
+	return (size == 0);
+}
+
 
 ////////////////// Main  //////////////////
 ///////////////////////////////////////////
@@ -200,6 +215,13 @@ int main()
 	cout << "list size = " << test.Length() << endl;
 	cout << "head of list = " << test.listHead() << endl;
 	cout << "tial of list = " << test.listTail() << endl;
+
+	if (test.empty())
+		cout << "empty" << endl;
+	else
+		cout << "Not empty" << endl;
+	
+	test.clear();
 
 	return 0;
 }
