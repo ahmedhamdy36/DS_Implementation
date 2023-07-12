@@ -1,0 +1,2 @@
+G:\courses\Data Structure\linkedList\x64\Debug\linkedList.exe
+G:\courses\Data Structure\implementation\linkedList\x64\Debug\linkedList.exe
