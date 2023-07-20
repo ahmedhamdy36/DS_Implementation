@@ -1,0 +1,1 @@
+G:\courses\Data Structure\implementation\linkedStack\x64\Debug\linkedStack.exe
